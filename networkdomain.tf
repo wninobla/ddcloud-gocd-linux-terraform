@@ -2,8 +2,8 @@
 #  assets.  In this case, this resource creates network domains.
 
 resource "ddcloud_networkdomain" "networkdomain" {
-  name                 = "GoCD Test Domain - Linux"
+  name                 = "$var.TF_VAR_networkdomain_name"
   description          = "New network domain created via Terraform and GoCD via Windows"
-  datacenter           = "NA12"
+  datacenter           = "$var.TF_VAR_datacenter"
   plan                 = "ADVANCED"
 }
