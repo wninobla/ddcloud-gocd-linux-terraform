@@ -8,4 +8,5 @@
 variable "username" {} #Matches to TF_VAR_username
 variable "password" {} #Matches to TF_VAR_password
 variable "region" {} #Matches to TF_VAR_region
+variable "datacenter" {} #Matches to TF_VAR_datacenter
 variable "networkdomain_name" {} #Matches to TF_VAR_networkdomain_name
