@@ -3,14 +3,14 @@
 
 resource "ddcloud_server" "webapp-server" {
   name                 = "WEBAPP SERVER"
-  admin_password       = "password"
+  admin_password       = "${var.server_password}"
   memory_gb            = 4
   cpu_count            = 2
   networkdomain        = "${ddcloud_networkdomain.networkdomain.id}"
   primary_adapter_ipv4 = "192.168.0.11"
   dns_primary          = "8.8.8.8"
   dns_secondary        = "8.8.4.4"
-  os_image_name        = "CentOS 7 64-bit 2 CPU"
+  os_image_name        = "${var.server_dmzimagename}"
 
   disk {
     scsi_unit_id       = 0
@@ -23,14 +23,14 @@ resource "ddcloud_server" "webapp-server" {
 
 resource "ddcloud_server" "db-server" {
   name                 = "DB SERVER"
-  admin_password       = "password"
+  admin_password       = "${var.server_password}"
   memory_gb            = 4
   cpu_count            = 2
   networkdomain        = "${ddcloud_networkdomain.networkdomain.id}"
   primary_adapter_ipv4 = "192.168.2.11"
   dns_primary          = "8.8.8.8"
   dns_secondary        = "8.8.4.4"
-  os_image_name        = "CentOS 7 64-bit 2 CPU"
+  os_image_name        = "${var.server_trustimagename}"
 
   disk {
     scsi_unit_id       = 0
@@ -43,14 +43,14 @@ resource "ddcloud_server" "db-server" {
 
 resource "ddcloud_server" "utility-server" {
   name                 = "UTILITY SERVER"
-  admin_password       = "password"
+  admin_password       = "${var.server_password}"
   memory_gb            = 4
   cpu_count            = 2
   networkdomain        = "${ddcloud_networkdomain.networkdomain.id}"
   primary_adapter_ipv4 = "192.168.4.11"
   dns_primary          = "8.8.8.8"
   dns_secondary        = "8.8.4.4"
-  os_image_name        = "CentOS 7 64-bit 2 CPU"
+  os_image_name        = "${var.server_utilityimagename}"
 
   disk {
     scsi_unit_id       = 0
