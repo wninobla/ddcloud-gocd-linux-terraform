@@ -18,3 +18,9 @@ variable "networkdomain_name" {} #Matches to TF_VAR_networkdomain_name
 variable "vlan_dmzname" {} #Matches to TF_VAR_vlan_dmzname
 variable "vlan_trustname" {} #Matches to TF_VAR_vlan_trustname
 variable "vlan_utilityname" {} #Matches to TF_VAR_vlan_utilityname
+
+#  Variables in server.tf file
+variable "server_password" {} #Matches to TF_VAR_server_password
+variable "server_dmzimagename" {} #Matches to TF_VAR_server_dmzimagename
+variable "server_trustimagename" {} #Matches to TF_VAR_server_trustimagename
+variable "server_utilityimagename" {} #Matches to TF_VAR_server_utilityimagename
